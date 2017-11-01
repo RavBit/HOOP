@@ -5,9 +5,9 @@ class Soldier :
 	public Decorator
 {
 public:
-	Soldier(BaseNPC* npc);
+	Soldier(BaseNPC* NPC);
 	void Render() override;
 private:
-	BaseNPC* npc;
+	BaseNPC* NPC;
 };
 

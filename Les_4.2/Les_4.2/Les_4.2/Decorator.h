@@ -6,5 +6,5 @@ public:
 	Decorator(BaseNPC* npc);
 	void Render() override;
 private:
-	BaseNPC* npc;
+	BaseNPC* NPC;
 };
