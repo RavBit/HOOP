@@ -15,13 +15,13 @@ public:
 
 	T Get() {
 		T obj;
-		obj = queue.front();
-		queue.erase(queue.front());
+		obj = queue[0];
+		queue.erase(queue.[0]);
 		return obj;
 	}
 
 	T Peek() {
-		return queue.front();
+		return queue[0];
 	}
 
 	int Size() {

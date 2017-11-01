@@ -1,0 +1,6 @@
+﻿  DrawField.cpp
+d:\projects\heavy object oriented programming\game_of_life\game_of_life\game_of_life\drawfield.cpp(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\projects\heavy object oriented programming\game_of_life\game_of_life\game_of_life\drawfield.cpp(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+d:\projects\heavy object oriented programming\game_of_life\game_of_life\game_of_life\drawfield.cpp(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Game_Of_Life.vcxproj -> D:\Projects\Heavy Object Oriented Programming\Game_Of_Life\Game_Of_Life\Debug\Game_Of_Life.exe
+  Game_Of_Life.vcxproj -> D:\Projects\Heavy Object Oriented Programming\Game_Of_Life\Game_Of_Life\Debug\Game_Of_Life.pdb (Partial PDB)
