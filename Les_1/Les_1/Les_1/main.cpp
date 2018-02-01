@@ -2,7 +2,10 @@
 #include <iostream>
 #include <string>
 #include "Grid.h"
+#include "Module.h"
 
+
+using namespace std;
 /*
 
 De volgende objecten spelen een rol:
@@ -25,15 +28,19 @@ ingeroosterd op een bepaald moment en dit is weer gekoppeld aan een lokaal. De d
 makkelijk alles aan eklaar knopen en de Docent of Student aan modules koppelen. Deze staan op een bepaalde plek (tijd) in het rooster en dit word gedrawd in het grid.
 
 */
-Docent Docent;
-Student Student;
-Module Module;
-
-int tijden, gridsize;
-string teachername, studentname; 
 
 int main()
 {
+	Module module = Module();
+	string modulename;
+	int starttime, duration;
+	cout << "Naam van de Module?:" << endl;
+	cin >> modulename;
+	cout << "Starttijd (0 tm 2400):" << endl;
+	cin >> starttime;
+	cout << "Duur (in minuten):" << endl;
+	cin >> duration;
 
+	module.InsertModule(modulename, starttime, duration);
 }
 

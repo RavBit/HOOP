@@ -1,15 +1,19 @@
 #pragma once
 #include <string>
+#include <iostream>
+
+using namespace std;
 
 class Student
 {
 public:
-	Student(std::string);
+	Student(string);
 	std::string getName();
 	int getECs();
 	void addECs(int);
+	void EditECs(int);
 	void removeECs(int);
 private:
-	std::string name;
+	string name;
 	int ECpunten;
 };

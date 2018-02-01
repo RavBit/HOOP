@@ -1,10 +1,13 @@
 #pragma once
 #include <string>
+
+using namespace std;
+
+
 class Docent {
 public:
-	Docent(std::string);
-	std::string getName();
+	Docent(string);
+	string getName();
 private:
-	std::string name;
-	std::string module;
+	string name;
 };

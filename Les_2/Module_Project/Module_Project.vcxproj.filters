@@ -18,10 +18,10 @@
     <ClInclude Include="Docent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Modules.h">
+    <ClInclude Include="Student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Student.h">
+    <ClInclude Include="Module.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

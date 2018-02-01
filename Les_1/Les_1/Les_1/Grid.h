@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 
+/*
 class Grid
 {
 public:
@@ -22,4 +23,4 @@ void Grid::DrawGrid(Docent docent, Student student)
 	}
 	//Teken een grid dvm de modules die hier staan. Deze bevatten de tijden en kunnen zo in het grid worden geplaatst.
 
-}
+}*/

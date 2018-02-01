@@ -1,7 +1,7 @@
-﻿  Student.cpp
-  Module.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  main.cpp
-  Module_Project.vcxproj -> D:\Cloud\OneDrive\Projects\Heavy Object Oriented Programming\Module_Project_2\Module_Project\Debug\Module_Project.exe
-  Module_Project.vcxproj -> D:\Cloud\OneDrive\Projects\Heavy Object Oriented Programming\Module_Project_2\Module_Project\Debug\Module_Project.pdb (Partial PDB)
+﻿  Module.cpp
+d:\projects\git\hoop\les_2\module_project\module.cpp(28): warning C4018: '<': signed/unsigned mismatch
+d:\projects\git\hoop\les_2\module_project\module.cpp(43): warning C4018: '<': signed/unsigned mismatch
+d:\projects\git\hoop\les_2\module_project\module.cpp(55): warning C4018: '<': signed/unsigned mismatch
+d:\projects\git\hoop\les_2\module_project\module.cpp(60): warning C4018: '<': signed/unsigned mismatch
+  Module_Project.vcxproj -> D:\Projects\GIT\HOOP\Les_2\Debug\Module_Project.exe
+  Module_Project.vcxproj -> D:\Projects\GIT\HOOP\Les_2\Debug\Module_Project.pdb (Partial PDB)

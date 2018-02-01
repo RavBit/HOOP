@@ -111,7 +111,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Docent.h" />
-    <ClInclude Include="Modules.h" />
+    <ClInclude Include="Module.h" />
     <ClInclude Include="Student.h" />
   </ItemGroup>
   <ItemGroup>
