@@ -7,9 +7,9 @@ using namespace std;
 class Module
 {
 public:
+	string name;
 	void InsertModule(string modulename, int starttime, int duration);
 private:
-	string name;
 	int duration;
 	int starttime;
 };

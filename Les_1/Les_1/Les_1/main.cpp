@@ -8,24 +8,31 @@
 using namespace std;
 /*
 
-De volgende objecten spelen een rol:
-- Docent
-- Student
-- Modules
-- Lokalen
-- Grid (Uren)
+Je zou het lesrooster ook kunnen onderverdelen in een grid. Deze heb ik hieronder beschreven
 
-De objecten die er moeten zijn, zijn de Student, Modules en Lokalen. Deze moeten als objecten ook attributen zoals lokaalnummers, namen en eventuele modules bevatten.
+De volgende variable zouden voor zo'n project nodig zijn:
 
 
-De functies:
-	Lesrooster instantiaten en ook aanpassen. Dit zou makkelijk in een grid vorm kunnen.
+Voor de module:
+Modulenaam
+Docentnaam
+Lokaal
+Starttijd
+Eindttijd
 
+Voor de grid:
+Grootte
+Aantal uren
+Eventuele pauzes
 
-De relaties:
-Het lesrooster zal altijd doormiddel van een grid en het aantal uren objecten opvragen. Denk aan het object Student daar zitten weer vakken bij verbonden. De vakken zijn 
-ingeroosterd op een bepaald moment en dit is weer gekoppeld aan een lokaal. De docent die een bepaald vak geeft word hier ook aan gekoppeld. Met deze inrichting kan je
-makkelijk alles aan eklaar knopen en de Docent of Student aan modules koppelen. Deze staan op een bepaalde plek (tijd) in het rooster en dit word gedrawd in het grid.
+Voor de user:
+Misschien de roosters op klassen, student of docent kunnen verdelen?
+
+Functies:
+Modules toevoegen
+Grid tekenen
+Deze sorteren op klas, docent, student
+Modules aanpassen/verwijderen
 
 */
 
@@ -34,11 +41,21 @@ int main()
 	Module module = Module();
 	string modulename;
 	int starttime, duration;
+
+	//UUR SYSTEEM
 	cout << "Naam van de Module?:" << endl;
 	cin >> modulename;
 	cout << "Starttijd (0 tm 2400):" << endl;
 	cin >> starttime;
 	cout << "Duur (in minuten):" << endl;
+	cin >> duration;
+
+	//GRID SYSTEEM
+	cout << "Naam van de Module?:" << endl;
+	cin >> modulename;
+	cout << "Welk uur start dit rooster? (1 tm 10):" << endl;
+	cin >> starttime;
+	cout << "Duur (in roosteruren):" << endl;
 	cin >> duration;
 
 	module.InsertModule(modulename, starttime, duration);
