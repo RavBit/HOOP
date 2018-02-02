@@ -1,0 +1,4 @@
+﻿D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Les_4.2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  BaseNPC.cpp
+  Les_4.2.vcxproj -> D:\Projects\GIT\HOOP\Les_7\Debug\Les_7.exe
+  Les_4.2.vcxproj -> D:\Projects\GIT\HOOP\Les_7\Debug\Les_7.pdb (Partial PDB)
