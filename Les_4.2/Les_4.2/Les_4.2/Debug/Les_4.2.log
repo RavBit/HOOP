@@ -1,3 +1,12 @@
 ﻿  main.cpp
+  Soldier.cpp
+  Shaman.cpp
+  Orc.cpp
+  Human.cpp
+  Farmer.cpp
+  Elf.cpp
+  Decorator.cpp
+  Generating Code...
+  LINK : D:\Projects\GIT\HOOP\Les_4.2\Les_4.2\Debug\Les_4.2.exe not found or not built by the last incremental link; performing full link
   Les_4.2.vcxproj -> D:\Projects\GIT\HOOP\Les_4.2\Les_4.2\Debug\Les_4.2.exe
   Les_4.2.vcxproj -> D:\Projects\GIT\HOOP\Les_4.2\Les_4.2\Debug\Les_4.2.pdb (Partial PDB)
