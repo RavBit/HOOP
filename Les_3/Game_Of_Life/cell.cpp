@@ -4,46 +4,42 @@
 
 using namespace std;
 
-Cell::Cell(int x, int y)
+Cell::Cell(int x, int y, bool state)
 {
+	alive = state;
 	int random = rand() % 100;
 
 	if (random < 60)
-		Alive();
+		alive = true;
 	else
-		Death();
+		alive = false;
 
 	this->x = x;
 	this->y = y;
 
 };
 
+void Cell::SetState(int state)
+{
+	alive = state;
+
+}
+int Cell::GetState()
+{
+	return OLDALIVE;
+}
+int Cell::SaveState()
+{
+
+	OLDALIVE = alive;
+	return 0;
+}
+
+
 string Cell::Display()
 {
 	if (alive) 
 		return "X";
 	else
-		return "0";
-};
-
-void Cell::Alive()
-{
-	alive = true;
-};
-void Cell::Death()
-{
-	alive = false;
-};
-
-void Cell::SwitchState(bool state)
-{
-	alive = state;
-};
-bool Cell::GetState()
-{
-	return oldalive;
-};
-void Cell::SaveState()
-{
-	oldalive = alive;
+		return " ";
 };

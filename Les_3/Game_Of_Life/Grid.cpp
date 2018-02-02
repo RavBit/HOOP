@@ -12,61 +12,122 @@ void Grid::AddCells()
 	{
 		for (int y = 0; y < 25; y++)
 		{
-			Cells[x][y] = new Cell(x,y);
+			Cells[x][y] = new Cell(x,y, true);
+			Cells[x][y]->SaveState();
 		}
 	}
 }
 
-void Grid::DrawCells()
-{
-	for (int x = 0; x < 25; x++)
-	{
-		for (int y = 0; y < 25; y++)
-		{
-			cout << Cells[x][y]->Display();
-		}
-		cout << endl;
-	}
-	cout << endl;
-}
 
 void Grid::CheckNB(Cell* cell)
 {
 	int nb = 0;
-	for (int x = (cell->x - 1); x <= (cell->x + 1); x++)
+	int x = cell->x;
+	int y = cell->y;
+
+	//Checking for neighbours around the Cell
+	if (x < 25 && y > 0) 
 	{
-		if (x > 0 && x <= 25)
-			for (int y = (cell->y - 1); x <= (cell->y + 1); y++)
-				if (y >= 0 && y <= 25)
-					if (Cells[x][y]->GetState())
-					{
-						nb += 1;
-						cout << "X: " << x << " Y: " << y << endl;
-					}
+		if (Cells[x + 1][y - 1]->GetState()) 
+		{
+			nb++;
+		}
 	}
-	if (cell->oldalive)
-		nb -= 1;
-	cout << endl;
-	if (nb > 3 || nb < 2 && cell->GetState())
-		cell->SwitchState(false);
-	else if(nb > 3 && cell->GetState())
-		cell->SwitchState(true);
+
+	if (x < 25) 
+	{
+		if (Cells[x + 1][y]->GetState()) 
+		{
+			nb++;
+		}
+	}
+
+	if (x < 25 && y < 25)
+	{
+		if (Cells[x + 1][y + 1]->GetState()) 
+		{
+			nb++;
+		}
+	}
+
+	if (x > 0 && y > 0) 
+	{
+		if (Cells[x - 1][y - 1]->GetState()) 
+		{
+
+			nb++;
+		}
+	}
+
+	if (x > 0) 
+	{
+		if (Cells[x - 1][y]->GetState())
+		{
+			nb++;
+		}
+	}
+
+	if (x > 0 && y < 25) 
+	{
+		if (Cells[x - 1][y + 1]->GetState())
+		{
+			nb++;
+		}
+	}
+
+	if (y > 0) 
+	{
+		if (Cells[x][y - 1]->GetState()) 
+		{
+			nb++;
+		}
+	}
+
+	if (y < 25) 
+	{
+		if (Cells[x][y + 1]->GetState()) 
+		{
+			nb++;
+		}
+	}
+	if (cell->GetState())
+	{
+		if (nb > 3 || nb < 2)
+		{
+
+			cell->SetState(false);
+			nb = 0;
+		}
+	}
+	else if (cell->GetState())
+	{
+		if (nb == 3)
+		{
+			cell->SetState(true);
+			nb = 0;
+		}
+	}
+	else
+	{
+		nb = 0;
+	}
 };
 
 
 void Grid::RefreshGrid()
 {
-	DrawCells();
 	for (int x = 0; x < 25; x++)
 	{
 		for (int y = 0; y < 25; y++)
 		{
 			Cells[x][y]->SaveState();
+			cout << Cells[x][y]->Display();
 		}
+		cout << endl;
 	}
-	for (int x = 0; x < 25; x++)
+	for (int x = 0; x < 24; x++)
 	{
-		for (int y = 0; y < 25; y++)
+		for (int y = 0; y < 24; y++)
 		{
 			CheckNB(Cells[x][y]);
 		}

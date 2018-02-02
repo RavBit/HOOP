@@ -11,7 +11,6 @@ public:
 	Grid();
 	Cell* Cells[25][25];
 	void AddCells();
-	void DrawCells();
 	void RefreshGrid();
 	void CheckNB(Cell* cell);
 };

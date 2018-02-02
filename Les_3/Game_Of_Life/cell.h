@@ -6,15 +6,13 @@
 using namespace std;
 class Cell {
 public:
-	Cell(int x, int y);
+	Cell(int x, int y, bool state);
 	string Display();
 	int x, y, spawnrate = 60;
+	void SetState(int state);
+	int SaveState();
+	int GetState();
 	bool alive;
-	bool oldalive;
-	void Alive();
-	void Death();
-	void SwitchState(bool state);
-	void SaveState();
-	bool GetState();
-
+	bool OLDALIVE = false;
+private:
 };
